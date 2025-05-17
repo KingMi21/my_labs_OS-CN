@@ -1,0 +1,180 @@
+Лог HTTP-запросов
+Дата начала: 2025-05-17 18:02:28.401468
+
+
+[2025-05-17 18:02:28.401468] Отправка OPTIONS запроса к: https://httpbin.org/get
+
+----------------------------------------------------------------------------------------------------
+Детали ответа сервера
+----------------------------------------------------------------------------------------------------
+Код состояния: 200
+
+Заголовки:
+Date: Sat, 17 May 2025 16:02:27 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Allow: GET, HEAD, OPTIONS
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH, OPTIONS
+Access-Control-Max-Age: 3600
+
+Тело ответа:
+
+
+[2025-05-17 18:02:29.051034] Отправка GET запроса к: https://httpbin.org/get
+
+----------------------------------------------------------------------------------------------------
+Детали ответа сервера
+----------------------------------------------------------------------------------------------------
+Код состояния: 200
+
+Заголовки:
+Date: Sat, 17 May 2025 16:02:28 GMT
+Content-Type: application/json
+Content-Length: 307
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+
+Тело ответа:
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-6828b314-219ac01b6cadcd891dd13b34"
+  },
+  "origin": "104.28.218.58",
+  "url": "https://httpbin.org/get"
+}
+
+[2025-05-17 18:02:29.689209] Отправка GET запроса к: https://httpbin.org/get
+
+Параметры запроса: {'параметр1': 'значение1', 'параметр2': 'значение2'}
+
+----------------------------------------------------------------------------------------------------
+Детали ответа сервера
+----------------------------------------------------------------------------------------------------
+Код состояния: 200
+
+Заголовки:
+Date: Sat, 17 May 2025 16:02:28 GMT
+Content-Type: application/json
+Content-Length: 730
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+
+Тело ответа:
+{
+  "args": {
+    "параметр1": "значение1",
+    "параметр2": "значение2"
+  },
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-6828b314-569b35660eabb2856b74ddab"
+  },
+  "origin": "104.28.218.58",
+  "url": "https://httpbin.org/get?параметр1=значение1&параметр2=значение2"
+}
+
+[2025-05-17 18:02:30.280633] Отправка POST запроса к: https://httpbin.org/post
+
+Данные формы: {'логин': 'админ', 'пароль': 'секрет123'}
+
+----------------------------------------------------------------------------------------------------
+Детали ответа сервера
+----------------------------------------------------------------------------------------------------
+Код состояния: 200
+
+Заголовки:
+Date: Sat, 17 May 2025 16:02:29 GMT
+Content-Type: application/json
+Content-Length: 621
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+
+Тело ответа:
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {
+    "логин": "админ",
+    "пароль": "секрет123"
+  },
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Length": "138",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-6828b315-1350554625fd93201af1d7c8"
+  },
+  "json": null,
+  "origin": "104.28.218.58",
+  "url": "https://httpbin.org/post"
+}
+
+[2025-05-17 18:02:31.076558] Отправка POST запроса к: https://httpbin.org/post
+
+JSON данные:
+{
+  "title": "Test",
+  "body": "Hello World",
+  "user": 1
+}
+
+----------------------------------------------------------------------------------------------------
+Детали ответа сервера
+----------------------------------------------------------------------------------------------------
+Код состояния: 200
+
+Заголовки:
+Date: Sat, 17 May 2025 16:02:30 GMT
+Content-Type: application/json
+Content-Length: 567
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+
+Тело ответа:
+{
+  "args": {},
+  "data": "{\"title\": \"Test\", \"body\": \"Hello World\", \"user\": 1}",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Length": "51",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-6828b316-0f546afd7c4182a31898fda6"
+  },
+  "json": {
+    "body": "Hello World",
+    "title": "Test",
+    "user": 1
+  },
+  "origin": "104.28.218.58",
+  "url": "https://httpbin.org/post"
+}
+
+Логирование завершено
